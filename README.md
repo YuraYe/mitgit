@@ -17,6 +17,7 @@ Alternative for included "math" library
 
 ## All functions
 
+### nomath
    Поиск количества цифр в числе
    > count_digs_len(number)
 
@@ -61,8 +62,35 @@ Alternative for included "math" library
    Продолжение рубрики: догадайся сам ^^
    > find_max(\*args)
 
+### console
+
+Цветной вывод в терминал
+> draw(string, color0, color1=None, color2=None, end='\n')
+
+Прочитать из консоли список значений через разделитель
+> read(txt='', sep=' ')
+
+Проверка ввода на число в диапазоне
+> input_int(text='', minv='none', maxv='none')
+
 
 ## Example
+
+> For more information use:
+
+```
+from mit import examples
+
+examples.test0()
+examples.test1()
+examples.test2()
+# ...
+examples.test11()
+
+```
+
+### Small example code
+
 ```
 import mit
 

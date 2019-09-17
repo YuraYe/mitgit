@@ -72,18 +72,19 @@ def input_int(text='', minv='none', maxv='none'):
             maxv = minv + 10
         while True:
             try:
-                num = int(input(text))
+                num = input(text)
+                num = int(num)
                 if int(num) < minv:
                     print(f'Number {num} is to small!')
                 elif int(num) > maxv:
                     print(f'Number {num} is to long!')
                 else:
                     break
-            except ReferenceError:
-                print('{} iNaN... try again'.format(num))
+            except ValueError:
+                print('{} => isNaN... try again'.format(num))
     else:
         try:
             num = int(input(text))
-        except ReferenceError:
-            print('{} isNaN... try again'.format(num))
+        except ValueError:
+            print('{} => isNaN... try again'.format(num))
     return num
