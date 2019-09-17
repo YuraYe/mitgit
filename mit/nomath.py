@@ -33,7 +33,7 @@ def euclid(a, b):
 
 
 # Наибольший общий делитель (НОД)
-def get_nod(*args):
+def get_nod2(a, b):
     while b > 0:
         # c = a % b
         # a = b
@@ -43,8 +43,26 @@ def get_nod(*args):
 
 
 # Наименьшее общее кратное (НОК)
+def get_nok2(a, b):
+    return (a * b) // get_nod2(a, b)
+
+
+# Наибольший общий делитель (НОД)
+def get_nod(*args):
+    nod = get_nod2(args[0], args[1])
+    for i in range(2, len(args) - 1):
+        nod = get_nod2(nod, args[i])
+    return nod
+
+
+# Наименьшее общее кратное (НОК)
+# TODO: работает не корректно!
 def get_nok(*args):
-    return (a * b) // get_nod(args)
+    nok = get_nok2(args[0], args[1])
+    for i in range(2, len(args) - 1):
+        nok = get_nok(nok, args[i])
+    return nok
+# print(get_nok(2, 4, 8, 6))
 
 
 # Поиск всех делителей числа
