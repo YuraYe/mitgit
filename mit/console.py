@@ -57,5 +57,33 @@ def draw(string, color0, color1=None, color2=None, end='\n'):
     print("{}{}{}{}\033[00m\033[00m\033[00m".format(color0, color1, color2, string, end=end))
 
 
+# Прочитать из консоли список значений через разделитель
 def read(txt='', sep=' '):
     return map(input(txt).split(sep))
+
+
+# Проверка ввода на число в диапазоне
+def input_int(text='', minv='none', maxv='none'):
+    num = 'Error'
+    if minv != 'none' or maxv != 'none':
+        if minv == 'none':
+            minv = 0
+        elif maxv == 'none':
+            maxv = minv + 10
+        while True:
+            try:
+                num = int(input(text))
+                if int(num) < minv:
+                    print(f'Number {num} is to small!')
+                elif int(num) > maxv:
+                    print(f'Number {num} is to long!')
+                else:
+                    break
+            except ReferenceError:
+                print('{} iNaN... try again'.format(num))
+    else:
+        try:
+            num = int(input(text))
+        except ReferenceError:
+            print('{} isNaN... try again'.format(num))
+    return num

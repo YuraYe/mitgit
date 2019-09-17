@@ -1,33 +1,6 @@
 # ##### #### *** ##### ##### #
 
 
-# Проверка ввода
-def input_int(text='', minv='none', maxv='none'):
-    num = 'Error'
-    if minv != 'none' or maxv != 'none':
-        if minv == 'none':
-            minv = 0
-        elif maxv == 'none':
-            maxv = minv + 10
-        while True:
-            try:
-                num = int(input(text))
-                if int(num) < minv:
-                    print(f'Number {num} is to small!')
-                elif int(num) > maxv:
-                    print(f'Number {num} is to long!')
-                else:
-                    break
-            except ReferenceError:
-                print('{} iNaN... try again'.format(num))
-    else:
-        try:
-            num = int(input(text))
-        except ReferenceError:
-            print('{} isNaN... try again'.format(num))
-    return num
-
-
 # Поиск количества цифр в числе
 def count_digs_len(number):
     temp = number
@@ -60,7 +33,7 @@ def euclid(a, b):
 
 
 # Наибольший общий делитель (НОД)
-def get_nod(a, b):
+def get_nod(*args):
     while b > 0:
         # c = a % b
         # a = b
@@ -70,8 +43,8 @@ def get_nod(a, b):
 
 
 # Наименьшее общее кратное (НОК)
-def get_nok(a, b):
-    return (a * b) // get_nod(a, b)
+def get_nok(*args):
+    return (a * b) // get_nod(args)
 
 
 # Поиск всех делителей числа
