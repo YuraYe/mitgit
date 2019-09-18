@@ -1,6 +1,6 @@
 # Python module with helpful data
 
-## Current version: 1.1.8
+## Current version: 1.1.9
 Here you can find many functions and classes that you can use in your future work.
 
 ## Files

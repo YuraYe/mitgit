@@ -57,7 +57,7 @@ def get_nod(*args):
 
 # Наименьшее общее кратное (НОК)
 # TODO: работает не корректно!
-def get_nok(*args):
+def get_nok(*args):  # do not use it!
     nok = get_nok2(args[0], args[1])
     for i in range(2, len(args) - 1):
         nok = get_nok(nok, args[i])
@@ -157,7 +157,8 @@ def find_max(*args):
     return big
 
 
-# Триугольник Паскаля
+# TODO: доваять треугольник Паскалу
+# Треугольник Паскаля
 #     1
 #    1 1
 #   1 2 1

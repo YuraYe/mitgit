@@ -3,9 +3,9 @@ from mit import console
 
 print('===== START =====')
 minn = 0
-maxx = 11
+maxx = 12
 while True:
-    opt = console.input_int('Chose test (0-11): ', 0, 11)
+    opt = console.input_int(f'Chose test ({minn}-{maxx}): ', minn, maxx)
 
     if opt == 0:
         examples.test0()
@@ -31,6 +31,8 @@ while True:
         examples.test10()
     elif opt == 11:
         examples.test11()
+    elif opt == 12:
+        examples.test12()
 
     fina = input('Press ENTER to restart...')
     if fina != '':
