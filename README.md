@@ -1,6 +1,6 @@
 # Python module with helpful data
 
-## Current version: 1.1.9
+## Current version: 1.1.10
 Here you can find many functions and classes that you can use in your future work.
 
 ## Files
@@ -17,6 +17,8 @@ Alternative for included "math" library
 > nomath.py
 
 ## All functions
+
+====================================================
 
 ### nomath
    Поиск количества цифр в числе
@@ -63,17 +65,28 @@ Alternative for included "math" library
    Продолжение рубрики: догадайся сам ^^
    > find_max(\*args)
 
+====================================================
+
 ### console
 
-Цветной вывод в терминал
-> draw(string, color0, color1=None, color2=None, end='\n')
+   Цветной вывод в терминал
+   > draw(string, color0, color1=None, color2=None, end='\n')
 
-Прочитать из консоли список значений через разделитель
-> read(txt='', sep=' ')
+   Прочитать из консоли список значений через разделитель
+   > read(txt='', sep=' ')
 
-Проверка ввода на число в диапазоне
-> input_int(text='', minv='none', maxv='none')
+   Проверка ввода на число в диапазоне
+   > input_int(text='', minv='none', maxv='none')
 
+====================================================
+
+### nostr
+
+   Перевернуть строку: привет! => !тевирп
+   > def rev(s)
+
+   Заменить по индексам на строки
+   > replace(string, indexes, new_values)
 
 ## Example
 
